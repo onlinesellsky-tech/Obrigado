@@ -1,4 +1,4 @@
-import { CheckCircle2, Mail, BookOpen, RefreshCw, Clock } from "lucide-react";
+import { CheckCircle2, Mail, BookOpen, RefreshCw, Clock, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
@@ -125,10 +125,26 @@ export default function ThankYou() {
         }`}
       >
         <div 
-          className={`flex justify-center transition-all duration-700 delay-100 ${
+          className={`flex flex-col items-center gap-6 transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
         >
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="relative">
+              <BadgeCheck 
+                className="w-10 h-10 sm:w-12 sm:h-12 text-[#FF5722] fill-[#FF5722]/20" 
+                strokeWidth={2.5}
+                data-testid="icon-badge-logo"
+              />
+            </div>
+            <h2 
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              data-testid="text-brand"
+            >
+              Mentalidade Elite
+            </h2>
+          </div>
+          
           <div className="relative">
             <CheckCircle2 
               className="w-16 h-16 sm:w-20 sm:h-20 text-[#FF5722]" 
