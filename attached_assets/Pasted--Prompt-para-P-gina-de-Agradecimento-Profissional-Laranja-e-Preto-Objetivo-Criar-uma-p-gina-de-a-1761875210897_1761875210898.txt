@@ -1,0 +1,55 @@
+✨ Prompt para Página de Agradecimento Profissional (Laranja e Preto)
+Objetivo: Criar uma página de agradecimento elegante, profissional e de alta conversão para confirmar a ação do usuário e incentivar o retorno ao site.
+
+🎨 Paleta de Cores e Estilo
+Cor Primária: Preto Absoluto (#000000) - Usado para o fundo principal ou para elementos de alto contraste (texto, ícones).
+
+Cor Secundária (Destaque): Laranja Vibrante/Cenoura (#FF5722 ou um tom ligeiramente mais escuro, como #D2691E para sofisticação) - Usado para botões, destaques e a linha de separação.
+
+Cor de Texto: Branco Puro (#FFFFFF) para o fundo preto, e Preto para a "caixinha" de CTA.
+
+Estilo: Minimalista e Moderno. Alto contraste para clareza. Use tipografia sans-serif limpa e profissional (ex: Montserrat, Roboto, Inter).
+
+📐 Estrutura e Conteúdo
+Fundo: Um fundo preto liso ou um preto texturizado sutil (efeito fosco/metálico) para um visual premium.
+
+Container Central (Área de Conteúdo): Uma área centralizada, com margens confortáveis, para focar a atenção na mensagem. Pode ser um retângulo em Preto Suave ou Branco (para máximo contraste com o preto de fundo) com bordas arredondadas.
+
+Conteúdo Principal:
+Título (H1):
+
+🎉 Acesso Confirmado! (Em Laranja Vibrante)
+
+Alternativa Profissional: Transação Concluída com Sucesso
+
+Mensagem Central: (Em texto branco, fonte legível e ligeiramente maior)
+
+"O acesso para os melhores best-sellers já está sendo enviado para o seu e-mail. Você fez uma ótima escolha!"
+
+Subtexto/Instruções: (Fonte menor, cor cinza-claro)
+
+Verifique sua caixa de entrada, spam ou promoções. Em poucos minutos, você terá o link.
+
+Elemento de Ação (A "Caixinha" de CTA):
+Design: Uma caixa retangular distinta, com fundo Preto e borda Laranja Vibrante, ou com fundo Branco/Cinza Claro e texto preto, posicionada logo abaixo da mensagem principal.
+
+Call to Action (CTA): Um botão de destaque dentro da caixa.
+
+Texto da Caixa: (Em negrito e cor de alto contraste, ex: Branco se a caixa for preta ou Preto se a caixa for branca)
+
+Gostaria de explorar mais títulos enquanto aguarda?
+
+Botão:
+
+Cor do Botão: Laranja Vibrante (Cor de fundo).
+
+Texto do Botão: (Em branco, negrito e letras maiúsculas)
+
+📚 VOLTE AO SITE
+
+💡 Elementos Visuais e Toques de Profissionalismo
+Ícone de Sucesso: Um ícone grande e centralizado (como um "check mark" (✅) ou um ícone de envelope) na cor Laranja Vibrante, posicionado acima do título principal.
+
+Linha de Destaque: Uma linha horizontal fina, na cor Laranja, logo abaixo do título, adicionando uma separação visual elegante.
+
+Rodapé: Inclua um pequeno rodapé com links importantes (ex: Política de Privacidade | Ajuda | Contato) em texto cinza-escuro/claro e o logo do seu site discretamente em preto ou branco.
