@@ -100,7 +100,7 @@ export default function ThankYou() {
 
   const handleReturnToSite = () => {
     trackEvent('cta_click', { variant });
-    window.location.href = "https://example.com";
+    window.location.href = "https://www.suabiblioteca.shop";
   };
 
   const handleResendEmail = () => {
@@ -256,30 +256,20 @@ export default function ThankYou() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-gray-600 text-xs sm:text-sm">
-            <a 
-              href="#" 
-              className="hover:text-[#FF5722] transition-colors duration-200"
-              data-testid="link-privacy"
+          <div className="text-center">
+            <p 
+              className="text-gray-600 text-xs sm:text-sm"
+              data-testid="text-contact"
             >
-              Política de Privacidade
-            </a>
-            <span className="text-gray-700">|</span>
-            <a 
-              href="#" 
-              className="hover:text-[#FF5722] transition-colors duration-200"
-              data-testid="link-help"
-            >
-              Ajuda
-            </a>
-            <span className="text-gray-700">|</span>
-            <a 
-              href="#" 
-              className="hover:text-[#FF5722] transition-colors duration-200"
-              data-testid="link-contact"
-            >
-              Contato
-            </a>
+              Alguma dúvida? Contate-nos{" "}
+              <a 
+                href="mailto:suporte@suabiblioteca.shop"
+                className="text-[#FF5722] hover:text-[#E64A19] transition-colors duration-200 underline"
+                data-testid="link-email-support"
+              >
+                suporte@suabiblioteca.shop
+              </a>
+            </p>
           </div>
           
           <p className="text-center text-gray-700 text-xs mt-4" data-testid="text-variant">
