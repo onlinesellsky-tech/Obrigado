@@ -6,12 +6,27 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
+type Variant = 'A' | 'B';
+
 export default function ThankYou() {
   const [isVisible, setIsVisible] = useState(false);
   const [countdown, setCountdown] = useState(300);
+  const [variant, setVariant] = useState<Variant>('A');
   const { toast } = useToast();
 
+  const trackEvent = (eventName: string, data?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, data);
+    }
+    console.log('Analytics Event:', eventName, data);
+  };
+
   useEffect(() => {
+    const selectedVariant = (Math.random() > 0.5 ? 'A' : 'B') as Variant;
+    setVariant(selectedVariant);
+    
+    trackEvent('page_view', { variant: selectedVariant });
+
     const timer = setTimeout(() => {
       setIsVisible(true);
       fireConfetti();
@@ -78,6 +93,7 @@ export default function ThankYou() {
         title: "E-mail reenviado!",
         description: "Verifique sua caixa de entrada novamente.",
       });
+      trackEvent('email_resend', { variant });
       setCountdown(300);
     },
     onError: () => {
@@ -90,12 +106,16 @@ export default function ThankYou() {
   });
 
   const handleReturnToSite = () => {
+    trackEvent('cta_click', { variant });
     window.location.href = "https://www.suabiblioteca.shop";
   };
 
   const handleResendEmail = () => {
     resendEmailMutation.mutate();
   };
+
+  const titleText = variant === 'A' ? 'Acesso Confirmado!' : 'Parabéns! Tudo Certo!';
+  const ctaText = variant === 'A' ? 'Volte ao Site' : 'Explorar Mais Títulos';
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 sm:px-6 py-12 relative overflow-hidden">
@@ -144,7 +164,7 @@ export default function ThankYou() {
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF5722] leading-tight"
             data-testid="text-title"
           >
-            Acesso Confirmado!
+            {titleText}
           </h1>
           
           <div className="w-20 sm:w-24 h-1 bg-[#FF5722] mx-auto rounded-full" data-testid="divider-orange" />
@@ -226,7 +246,7 @@ export default function ThankYou() {
               data-testid="button-return-site"
             >
               <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>Volte ao Site</span>
+              <span>{ctaText}</span>
             </Button>
           </div>
         </div>
@@ -251,6 +271,10 @@ export default function ThankYou() {
               </a>
             </p>
           </div>
+          
+          <p className="text-center text-gray-700 text-xs mt-4" data-testid="text-variant">
+            Versão: {variant}
+          </p>
         </footer>
       </div>
     </div>
