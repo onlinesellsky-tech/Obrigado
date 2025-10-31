@@ -20,7 +20,12 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '794077443459726');
-    fbq('track', 'PageView');
+    fbq('track', 'PageView'); <script>
+        fbq('track', 'Purchase', {
+          value: 10.00, // Seu valor médio de VENDA (Receita Bruta)
+          currency: 'BRL' 
+        });
+      </script>
     </script>
     <!-- End Meta Pixel Code -->
   </head>
